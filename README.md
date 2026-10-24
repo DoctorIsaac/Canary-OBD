@@ -1,4 +1,4 @@
-# OBD-telematics
+# Canary-OBD
 
 A Python project that logs live vehicle data from an OBD-II adapter into a local SQLite database. After it will show onto a Streamlit dashboad 
 
