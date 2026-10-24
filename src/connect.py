@@ -1,3 +1,5 @@
+import sys
+
 import obd 
 import time
 from datetime import datetime
@@ -15,6 +17,12 @@ commands = [
             ("Speed", obd.commands.SPEED),
             ("Coolant Temperature", obd.commands.COOLANT_TEMP)
         ]
+
+if not connection.is_connected():
+    print("Failed to connect to OBD-II adapter")
+    connection.close()
+    db_conn.close()
+    sys.exit(1)
 
 
 try:
